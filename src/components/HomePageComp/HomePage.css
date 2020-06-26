@@ -1,0 +1,28 @@
+.HomeContainer{
+  
+  background-image: url("../../images/img2.jpg");
+  height: 100vh; 
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+.main_txt{
+  font-size: 4rem;
+  color:black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align:center;
+
+}
+
+.button_home{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

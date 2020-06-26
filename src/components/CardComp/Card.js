@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Product from './data/productData'
+import Product from '../../data/productData'
 
 class Card extends Component {
 

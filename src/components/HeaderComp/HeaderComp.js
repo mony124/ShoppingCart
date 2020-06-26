@@ -6,7 +6,11 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Card from './Card';
+import Card from '../CardComp/Card';
+import Login from '../LoginPage/loginPage';
+import Contacts from '../ContactInfoComp/contactInfo'
+import HomePage from '../HomePageComp/HomePage'
+
 
 
 function TabPanel(props) {
@@ -47,6 +51,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
   },
+  
+
 }));
 
 export default function HeaderComp() {
@@ -59,21 +65,28 @@ export default function HeaderComp() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar >
+   
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Home" {...a11yProps(0)} />
+          <Tab label="Products" {...a11yProps(1)} />
+          <Tab label="Contact Info" {...a11yProps(2)} />
+          <Tab label="Login Page" {...a11yProps(3)} />
         </Tabs>
+        
       </AppBar>
+
       <TabPanel value={value} index={0}>
-      Hello Home
+        <HomePage />
       </TabPanel>
       <TabPanel value={value} index={1}>
        <Card />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <Contacts />
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        <Login />
       </TabPanel>
     </div>
   );

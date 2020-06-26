@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
-import HeaderComp from './HeaderComp';
-import FooterComp from './FooterComp';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import HeaderComp from './components/HeaderComp/HeaderComp';
+import FooterComp from './components/FooterComp/FooterComp';
 
 ReactDOM.render(
 
