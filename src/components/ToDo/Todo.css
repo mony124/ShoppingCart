@@ -1,0 +1,44 @@
+body{
+  background-color: #9266ff;
+}
+
+.app {
+  background-color: #3f3160;
+  min-height: 500px;
+  width:400px;
+  margin:40px auto;
+}
+
+#todoform input{
+  background-color: darkgray;
+  border: 0;
+  width: 200px;
+  height: 50px;
+  padding:0 20px;
+  margin:20px;
+  font-size: 18px;
+  border-radius: 10px;
+  color: #fff;
+
+}
+
+#todoform input::placeholder{
+  color: rgba(255,255,255,0.5);
+
+}
+
+#todoform input:focus{
+  outline: none;
+}
+
+#todoform button{
+  height: 50px;
+  width:80px;
+  border-radius: 5px;
+  border:0;
+  background-color: darkorange;
+  cursor:point;
+  font-weight: bolder;
+  color: #fff;
+
+}

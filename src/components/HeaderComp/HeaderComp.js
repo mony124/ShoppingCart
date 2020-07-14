@@ -10,6 +10,8 @@ import Card from '../CardComp/Card';
 import Login from '../LoginPage/loginPage';
 import Contacts from '../ContactInfoComp/contactInfo'
 import HomePage from '../HomePageComp/HomePage'
+import MainHeader from '../MainHeaderComp/MainHeader'
+import Todo from '../ToDo/Todo';
 
 
 
@@ -50,8 +52,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
+    display: 'block'
   },
-  
+  mainHeader: {
+    
+  },
 
 }));
 
@@ -65,16 +70,20 @@ export default function HeaderComp() {
 
   return (
     <div className={classes.root}>
-      <AppBar >
+
+    <MainHeader />
+    
+      
    
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
           <Tab label="Home" {...a11yProps(0)} />
           <Tab label="Products" {...a11yProps(1)} />
           <Tab label="Contact Info" {...a11yProps(2)} />
           <Tab label="Login Page" {...a11yProps(3)} />
+          <Tab label="ToDo" {...a11yProps(3)} />
         </Tabs>
         
-      </AppBar>
+     
 
       <TabPanel value={value} index={0}>
         <HomePage />
@@ -87,6 +96,9 @@ export default function HeaderComp() {
       </TabPanel>
       <TabPanel value={value} index={3}>
         <Login />
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        <Todo />
       </TabPanel>
     </div>
   );
